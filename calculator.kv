@@ -1,0 +1,100 @@
+<CustButton@Button>:
+	font_size: 40
+
+<CalcGridLayout>:
+	id: calculator
+	display: entry
+	rows: 6
+	padding: 10
+	spacing: 10
+	background_color: 0.1, 0.5, 0.6, 1
+
+	BoxLayout:
+		TextInput:
+			id: entry
+			font_size: 60
+			multiline: False
+
+	BoxLayout:
+		spacing: 10
+		CustButton:
+			text: "7"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "8"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "9"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "+"
+			on_press: entry.text += self.text
+
+	BoxLayout:
+		spacing: 10
+		CustButton:
+			text: "4"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "5"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "6"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "-"
+			on_press: entry.text += self.text
+
+	BoxLayout:
+		spacing: 10
+		CustButton:
+			text: "1"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "2"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "3"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "*"
+			on_press: entry.text += self.text
+
+
+	BoxLayout:
+		spacing: 10
+		CustButton:
+			text: "AC"
+			on_press: entry.text = ""
+			background_color: 5, 0, 0, 5
+		CustButton:
+			text: "0"
+			color: 0, 0.1, 0.1, 1
+			on_press: entry.text += self.text
+			background_color: 1, 1.5, 1.5, 3
+		CustButton:
+			text: "="
+			on_press: calculator.calculate(entry.text)
+			background_color: 0, 1, 0, 1
+		CustButton:
+			text: "/"
+			on_press: entry.text += self.text
+
